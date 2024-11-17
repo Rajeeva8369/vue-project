@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+ 
+<header>
+    <div class="header">
+    </div>
+ 
+    <nav class="navbar">
+       
+        <a href="#"><img src="MYLOGO.png" alt="MYLOGO" class="MYLOGO"></a>
+ 
+        <a href="#"><img src="menu.png"onclick="toggleMenu()" alt="menu" class="menu"></a>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div class="menu-header">
+                <span class="close-icon" onclick="toggleMenu()"></span>
+            </div>
+            <ul class="menu-items">
+                <p>Home</p>
+                <p>Shop</p>
+                <p>Magazine</p>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <a href="#"><img src="loop.png" alt="loop" class="loop"></a>
+            <input type="search" id="name" class="search-input" placeholder="Search" required>
+            <button type="button" class="search-button">
+                <i class="fas fa-search"></i>
+                <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+            </button>
+        </div>
+       
+       
+ 
+        <ul class="nav-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Magazine</a></li>
+        </ul>
+       
+ 
+        <div class="icons">
+            <div class="login-icon">
+                <a href="#"><img src="shoppincart.png" onclick="viewCart()" alt="Shopping Cart" class="cart-img"></a>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+ 
+            <div class="text">
+                <a href="file:///C:/Users/rosas/Downloads/my-shop-api/my-shop-api/index2.html">Login</a>
+            </div>
+           
+             
+        </div>
+    </nav>
+</header>
+ 
+<main>
+    <div class="sidebar">
+ 
+        <div class="best-match">
+            <select id="sort" name="sort">
+                <option value="best-match">Best Match </option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+            </select>
+        </div>
+       
+ 
+        <button class="filter-toggle" onclick="toggleFilter()">Filter By</button>
+       
+        <div class="filter-content" id="filterContent">
+            <h3>Filters</h3>
+            <div class="filter-category">
+                <h4>Category</h4>
+                <label><input type="checkbox" name="category"> Living Room</label>
+                <label><input type="checkbox" name="category"> Dinning Room</label>
+                <label><input type="checkbox" name="category"> Decoration</label>
+            </div>
+            <div class="filter-collection">
+                <h4>Collection</h4>
+                <label><input type="checkbox" name="collection" value="summer"> Bubble</label>
+                <label><input type="checkbox" name="collection" value="winter"> Bamboo</label>
+            </div>
+            <div class="filter-price">
+                <h4>Price Range</h4>
+                <input type="range" min="500" max="10000" value="50" class="price-range" id="priceRange">
+                <p>Price: <span id="priceValue">50</span></p>
+            </div>
+            <button class="apply-filters">Apply Filters</button>
+        </div>
+    </div>
+ 
+ 
+ 
+    <section class="product-list">
+        <div class="product-item" data-price="2500">
+            <img src="Bubblesofa.png" alt="Product 1">
+            <h4>$2500.00</h4>
+            <p>Astrea lounge</p>
+            <div class="filter">
+                <category>Living room</category>
+                <collection>Bubble</collection>
+            </div>
+            <img class="add-to-cart" onclick="addToCart(1)" src="C:/Users/rosas/Pictures/add1.jpg">
+            <div class="product-description">
+                <p>A sleek, modern sofa designed for comfort and style.</p>
+            </div>
+        </div>
+   
+        <div class="product-item" data-price="3480">
+            <img src="tablebasse.png" alt="Product 2">
+            <h4>$3480.00</h4>
+            <p>Astrea</p>
+            <div class="filter">
+                <category>Dining room</category>
+                <collection>Bubble</collection>
+            </div>
+            <img class="add-to-cart" onclick="addToCart(1)" src="C:/Users/rosas/Pictures/add1.jpg">
+            <div class="product-description">
+                <p>A unique, ergonomic sofa that adds a pop of color to any space.</p>
+            </div>
+        </div>
+   
+        <div class="product-item" data-price="2981">
+            <img src="decor.png" alt="Product 3">
+            <h4>$2981.00</h4>
+            <p>Astrea</p>
+            <div class="filter">
+                <category>Decoration</category>
+                <collection>Bamboo</collection>
+            </div>
+            <img class="add-to-cart" onclick="addToCart(1)" src="C:/Users/rosas/Pictures/add1.jpg">
+            <div class="product-description">
+                <p>A minimalist dining table that combines elegance with comfort.</p>
+            </div>
+        </div>
+   
+        <div class="product-item" data-price="2478">
+            <img src="decor2.png" alt="Product 4">
+            <h4>$2478.00</h4>
+            <p>Bubble</p>
+            <div class="filter">
+                <category>Decoration</category>
+                <collection>Bubble</collection>
+            </div>
+            <img class="add-to-cart" onclick="addToCart(1)" src="C:/Users/rosas/Pictures/add1.jpg">
+            <div class="product-description">
+                <p>A compact and stylish mini sofa perfect for small spaces..</p>
+            </div>
+        </div>
+   
+        <div class="product-item" data-price="4000">
+            <img src="tablebasse2.png" alt="Product 5">
+            <h4>$4000.00</h4>
+            <p>Bubble mini</p>
+            <div class="filter">
+                <category>Dining room</category>
+                <collection>Bamboo</collection>
+            </div>
+            <img class="add-to-cart" onclick="addToCart(1)" src="C:/Users/rosas/Pictures/add1.jpg">
+            <div class="product-description">
+                <p>A sustainable bamboo coffee table that adds natural elegance to your living room..</p>
+            </div>
+        </div>
+   
+        <div class="product-item" data-price="4589">
+            <img src="Bubblesofa2.png" alt="Product 6">
+            <h4>$4589.00</h4>
+            <p>Bubble</p>
+            <div class="filter">
+                <category>Living rooom</category>
+                <collection>Bamboo</collection>
+            </div>
+            <img class="add-to-cart" onclick="addToCart(1)" src="C:/Users/rosas/Pictures/add1.jpg">
+            <div class="product-description">
+                <p>A soft, reclining chair designed for ultimate relaxation.</p>
+            </div>
+        </div>
+    </section>
+   
+</main>
+ 
+<script>
+    function toggleFilter() {
+        const filterContent = document.getElementById("filterContent");
+        filterContent.style.display = filterContent.style.display === "none" || filterContent.style.display === "" ? "block" : "none";
+    }
+ 
+    const priceRange = document.getElementById("priceRange");
+    const priceValue = document.getElementById("priceValue");
+    priceRange.oninput = function() {
+        priceValue.innerText = this.value;
+    }
+</script>
+     <footer>
+            <div class="btn">
+                <button>1</button>  
+                <button>2</button>    
+                <button>3</button>    
+                <button>4</button>  
+                <button>5</button>  
+                <button>6</button>
+                <button>></button>
+            </div>
+        </footer>
+       
+ 
+ 
+</body>
+</html>

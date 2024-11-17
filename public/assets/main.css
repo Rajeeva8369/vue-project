@@ -1,0 +1,297 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.header {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-items li a:hover {
+  background-color: black;
+  padding: 10px 20px;
+  color: white;
+
+}.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 5px 10px;
+  outline: none;
+  transition: border-color 0.3s;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.search-input:focus {
+  border-bottom-color: #736d6b;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-items {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.nav-items li {
+  margin: 0 15px;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: black;
+  transition: left 0.3s ease-in-out;
+}
+.dropdown-menu.open {
+  left: 0;
+}
+.menu-items{
+  color: white;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  cursor: pointer;
+}
+.menu-icon{
+  cursor: pointer;
+}
+.close-icon{
+  color: white;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+
+}
+
+.icons div {
+  margin-left: 15px;
+}
+.filter{
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.filter > * {
+  margin: 0;
+}
+.add-to-cart{
+  margin-left:  200px;
+}
+.product-description {
+  visibility: hidden;
+  position: absolute;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.product-item.active .product-description {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+.sidebar {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.product-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.add-to-cart {
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 40px;  
+  height: 40px;
+
+}
+
+.add-to-cart:hover {
+  background-color: #444;
+}
+
+.filter-toggle {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.filter-content {
+  display: none;
+}
+
+
+.cart-icon {
+  position: relative;
+  display: inline-block;
+
+
+}
+
+.cart-icon a {
+  display: inline-flex;
+  align-items: center;
+ 
+}
+
+.cart-img {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+ 
+}
+
+.cart-img:hover {
+  transform: scale(1.1);
+}
+
+.loop {
+  width: 30px;  
+  height: auto;
+}
+
+.best-match {
+  margin-bottom: 15px;
+  position: static;
+}
+
+.best-match select {
+  appearance: none;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 0;
+  font-size: 15px;
+  color: #333;
+  width: 15%;
+  outline: none;
+ 
+}
+category{
+  color: grey;
+  font-family: Roboto;
+  font-size: small;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  }
+collection{
+      color: grey;
+      font-family: Roboto;
+      font-size: small;
+      margin-bottom: 50px;
+      margin-left: 10px;
+      }
+
+.best-match select:hover {
+  border-bottom: 2px solid #ade766;
+}
+.MYLOGO {
+  width: 80px;
+  height: auto;
+}
+footer {        
+  display: flex;          
+  justify-content: center;
+  align-items: center;  
+  padding: 20px 0;      
+  background-color: #f8f8f8;
+ }
+.btn {
+  display: flex;          
+  gap: 10px;            
+}
+
+footer button {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 15px;    
+  border: none;        
+  cursor: pointer;      
+  transition: background 0.3s;
+}
+
+footer button:hover {
+  background-color: rgb(98, 98, 98);
+}
